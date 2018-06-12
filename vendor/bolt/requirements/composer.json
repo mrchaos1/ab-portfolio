@@ -1,0 +1,40 @@
+{
+    "name": "bolt/requirements",
+    "description": "Requirement definitions for Bolt projects.",
+    "type": "library",
+    "keywords": [
+        "bolt",
+        "configuration",
+        "cms"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gawain Lynch",
+            "email": "gawain.lynch@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Bolt\\Requirement\\": "src"
+        }
+    },
+    "require": {
+        "php": "^5.5.9 || ^7.0",
+        "bolt/common": "^1.1",
+        "composer/ca-bundle": "^1.0",
+        "symfony/requirements-checker": "^1.0"
+    },
+    "require-dev": {
+        "bolt/bolt": "^3.4",
+        "passwordlib/passwordlib": "^1.0@beta"
+    },
+    "bin": [
+        "bin/bolt-requirements"
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

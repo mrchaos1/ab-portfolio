@@ -1,5 +1,5 @@
 # PHP files and folders
-/vendor
+#/vendor
 
 # Common developer tools
 composer.phar
