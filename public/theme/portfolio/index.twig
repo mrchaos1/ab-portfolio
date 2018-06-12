@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Andrey Beresnev | Film Director</title>
+		<meta charset="utf-8" />
+
+		<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('assets/favicon/apple-icon-57x57.png', 'theme') }}">
+		<link rel="apple-touch-icon" sizes="60x60" href="{{ asset('assets/favicon/apple-icon-60x60.png', 'theme') }}">
+		<link rel="apple-touch-icon" sizes="72x72" href="{{ asset('assets/favicon/apple-icon-72x72.png', 'theme') }}">
+		<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets/favicon/apple-icon-76x76.png', 'theme') }}">
+		<link rel="apple-touch-icon" sizes="114x114" href="{{ asset('assets/favicon/apple-icon-114x114.png', 'theme') }}">
+		<link rel="apple-touch-icon" sizes="120x120" href="{{ asset('assets/favicon/apple-icon-120x120.png', 'theme') }}">
+		<link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/favicon/apple-icon-144x144.png', 'theme') }}">
+		<link rel="apple-touch-icon" sizes="152x152" href="{{ asset('assets/favicon/apple-icon-152x152.png', 'theme') }}">
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-icon-180x180.png', 'theme') }}">
+		<link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('assets/favicon/android-icon-192x192.png', 'theme') }}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/favicon/favicon-32x32.png', 'theme') }}">
+		<link rel="icon" type="image/png" sizes="96x96" href="{{ asset('assets/favicon/favicon-96x96.png', 'theme') }}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon/favicon-16x16.png', 'theme') }}">
+		<link rel="manifest" href="{{ asset('assets/favicon/manifest.json', 'theme') }}">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="{{ asset('assets/favicon/ms-icon-144x144.png', 'theme') }}">
+		<meta name="theme-color" content="#ffffff">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="{{ asset('assets/js/ie/html5shiv.js', 'theme' ) }}"></script><![endif]-->
+		<link rel="stylesheet" href="{{ asset('assets/css/main.css', 'theme') }}" />
+		<link rel="stylesheet" href="{{ asset('assets/js/fancybox/jquery.fancybox.css', 'theme') }}" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="{{ asset('assets/js/fancybox/jquery.fancybox.js', 'theme') }}"></script>
+
+		<!--[if lte IE 8]><link rel="stylesheet" href="{{ asset('assets/css/ie8.css', 'theme') }}" /><![endif]-->
+	</head>
+	<body id="top">
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar">
+              <img src="{{ asset('assets/images/avatar.jpg', 'theme') }}" alt="" />
+          </a>
+					<h1 style = 'line-height:20px; ' >
+						<strong style = 'text-transform:uppercase; font-size:19px;' >Andrey Beresnev</strong>
+					</h1>
+					<div><small style = 'font-size:15px;' >Film Director / Producer</small></div>
+					<br>
+					<p>
+						<span style = 'font-size:22px;' ><i class="fa fa-mobile" aria-hidden="true"></i>  +7 (983) 322 3665<br /></span>
+						<span style = 'font-size:14px' ><i class="fa fa-envelope-o" aria-hidden="true"></i>  andberyshow@gmail.com<br /></span>
+
+						<span style = 'font-size:11px;' >NOVOSIBIRSK / RUSSIA / WORLDWIDE</span>
+					</p>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+
+					<!-- Two -->
+					<section id="two">
+						<div class="row">
+              {% setcontent videos = 'videos' %}
+              {% for video in videos %}
+              <article style = '' class="row">
+                <div class = '6u 12u$(xsmall)'>
+                  <a href="{{ video.video_url }}" class="image fit thumb fancybox">
+                    <img src="{{ video.image | thumbnail(500, 293, 'crop') }}" alt="" />
+                  </a>
+                </div>
+                <div class = '6u 12u$(xsmall)'>
+                  <h3>{{ video.title }}</h3>
+                  {{ video.content }}
+                </div>
+              </article>
+
+              <div class = '12u 12u$(xsmall)'>
+                <hr style = 'padding-left:15px; width: 100%;' >
+              </div>
+
+              {% endfor %}
+						</div>
+
+					</section>
+
+
+
+			</div>
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a rel = 'nofollow' target = '_blank' href="https://vimeo.com/andbery" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
+						<li><a rel = 'nofollow'  target = '_blank' href="https://www.instagram.com/andbery" class="icon fa-instagram"><span class="label">Instagramm</span></a></li>
+						<li><a rel = 'nofollow'  target = '_blank' href="https://www.facebook.com/andrey.beresnev.10" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a rel = 'nofollow'  target = '_blank' href="https://vk.com/andreyberes" class="icon fa-vk"><span class="label">VK</span></a></li>
+					</ul>
+					<ul class="copyright" style = 'text-transform-uppercase;' >
+						<li><a style = 'font-size:19px; '  href="/">© Andrey Beresnev</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{{ asset('assets/js/skel.min.js', 'theme') }}"></script>
+			<script src="{{ asset('assets/js/util.js', 'theme') }}"></script>
+			<!--[if lte IE 8]><script src="{{ asset('assets/js/ie/respond.min.js', 'theme') }}"></script><![endif]-->
+			<script src="{{ asset('assets/js/main.js', 'theme') }}"></script>
+
+
+
+			<script>
+
+				$(".fancybox").fancybox({
+					helpers : {
+						media: true
+					},
+					type: 'iframe',
+					autoSize: true,
+					scrolling: false
+				});
+			</script>
+
+	</body>
+</html>
